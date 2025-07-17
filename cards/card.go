@@ -1,23 +1,22 @@
 package main
 
-import "fmt"
-
 func main() {
 
-	card := newCard()
+	//function call
+	//card := newCard()
 
-	//slice
-	cards := []string{"Ace of Diamons", newCard()}
-	cards = append(cards, "Six of Spades")
+	//slice manual appending
+	//cards := deck{"Ace of Diamons", newCard()}
+	//cards = append(cards, "Six of Spades")
 
-	fmt.Println(card)
+	//fmt.Println(card)
 	//fmt.Println(cards)
 
-	for i, card := range cards {
-		fmt.Println(i, card)
-	}
+	cards := newDeck()
+	cards.print()
 }
 
-func newCard() string {
-	return "Five of Diamonds"
-}
+//function to create new card
+// func newCard() string {
+// 	return "Five of Diamonds"
+// }
